@@ -1,0 +1,25 @@
+\section{简单时序介绍}
+常见的简单时序包括：
+\begin{enumerate}
+  \item setup
+  \item hold
+  \item delay
+\end{enumerate}
+
+相对不常见的时序包括：
+\begin{enumerate}
+  \item retain
+  \item enable
+  \item removal
+  \item recovery
+  \item hidden
+  \item internal
+\end{enumerate}
+\subsection{setup}
+setup时间，一般中文翻译为“建立时间”，指为使时序逻辑电路\footnote{具有时钟端，有锁存功能}功能正常，数据需要早于时钟有效沿的时间。
+\subsection{hold}
+hold时间，一般中文翻译为“保持时间”，指为使时序逻辑电路功能正常，数据需要晚于时钟有效沿保持稳定的时间。
+\subsection{delay}
+delay时间，一般中文翻译为“延迟时间”，指逻辑门由输入（数据或时钟）到输出所需的时间。
+\subsection{retain}
+retain时间，一般中文翻译为“保留时间”，指时序逻辑电路上一周期输出在时钟有效沿之后仍然保持上一周期暑促结果不变的时间。

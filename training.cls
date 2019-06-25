@@ -8,6 +8,8 @@
 \RequirePackage{xltxtra}
 % use ctex
 \RequirePackage{ctex}
+% use graphics
+\RequirePackage{graphics}
 % use xifthen
 \RequirePackage{xifthen}
 % use progress bar for skill
@@ -45,7 +47,7 @@
 \titleformat{\section}         % Customise the \section command 
   {\Large\scshape\raggedright} % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
-  {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
+  {\thesection.}{0.5em}        % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
   [\titlerule]                 % Inserts a horizontal line after the heading
 \titlespacing*{\section}{0cm}{*1.8}{*1.8}

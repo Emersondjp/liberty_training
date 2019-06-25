@@ -4,56 +4,15 @@
 
 \documentclass{training}
 \begin{document}
-\section{前言}
-本文凝结自己多年的工作经验工作知识，总结汇总之，以便传授，以期更多的人能够在集成电路设计道路上走的更远。
+\include{chapters/preface}
+\include{chapters/overview}
+\include{chapters/liberty_brief}
 
-\section{概述}
-主要讲述集成电路设计中所使用的时序设计相关文件，文件格式，内容，提取方法等问题。
-
-\section{liberty文件简介}
-A gate-level modeling technology for timing, noise, power and test behavior that powers Synopsys Design Platform and sign-off tools. Learn more about Liberty and the Liberty Technical Advisory Board by visiting \href{http://ieee-isto.org/member_programs/liberty-technical-advisory-board/}{IEEE Industry Standards and Technology Organization}.
-
-liberty文件格式是常见的时序文件格式之一，以纯文本的格式简单介绍了各种类型标准单元、宏单元等的时序信息。根据版本不同可以分为以下集中格式：
-\begin{itemize}
-\item NLDM格式
-\item CCS格式
-\item ECSM格式
-\end{itemize}
-
-\section{简单时序介绍}
-常见的简单时序包括：
-\begin{enumerate}
-  \item setup
-  \item hold
-  \item delay
-\end{enumerate}
-
-相对不常见的时序包括：
-\begin{enumerate}
-  \item retain
-  \item enable
-  \item removal
-  \item recovery
-  \item hidden
-  \item internal
-\end{enumerate}
-
-\section{LIBERATE工具简介}
-liberate工具是CADENCE@公司出品的一款提取各类集成电路设计时序信息的一套工具，具体包括：
-\begin{itemize}
-\item liberate
-\item liberate\_mx
-\item liberate\_ams
-\item liberate\_validate
-\item liberate\_variate
-\end{itemize}
+\include{chapters/timing_brief}
+\include{chapters/liberate_brief}
 
 \newpage
-\section{参考文献}
-\begin{enumerate}
-  \item \href{}{Liberty\_User\_Guides\_and\_Reference\_Manual\_Suite}
-\end{enumerate}
+\include{chapters/references}
 \newpage
-\section{致谢}
-感谢这么多年来一直默默关心支持我的所有人。
+\include{chapters/thanks}
 \end{document}
