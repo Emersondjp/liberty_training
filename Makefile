@@ -1,4 +1,6 @@
 SRC = $(wildcard *.tex)
+#SUBSRC = $(addprefix chapters/,$(wildcard chapters/*.tex))
+SUBSRC = $(wildcard chapters/*.tex)
 
 PDFS = $(SRC:.tex=.pdf)
 
@@ -9,8 +11,9 @@ en: clean
 
 pdf: $(PDFS)
 
-%.pdf:  %.tex
+$(PDFS):  $(SRC) $(SUBSRC) training.cls
 	xelatex $<
+	evince $@
 
 ifeq ($(OS),Windows_NT)
   # on Windows
@@ -22,4 +25,5 @@ endif
 
 clean:
 	$(RM) *.log *.aux *.bbl *.blg *.synctex.gz *.out *.toc *.lof *.idx *.ilg *.ind *.pdf
+	$(RM) chapters/*.log chapters/*.aux chapters/*.bbl chapters/*.blg chapters/*.synctex.gz chapters/*.out chapters/*.toc chapters/*.lof chapters/*.idx chapters/*.ilg chapters/*.ind chapters/*.pdf
 

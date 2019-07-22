@@ -3,7 +3,7 @@
 \LoadClass[12pt]{article}
 
 % disable indent globally
-\setlength{\parindent}{0pt}
+\setlength{\parindent}{4pt}
 % some general improvements, defines the XeTeX logo
 \RequirePackage{xltxtra}
 % use ctex
@@ -45,18 +45,24 @@
 \RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command 
-  {\Large\scshape\raggedright} % Make the \section headers large (\Large),
+  {\LARGE\scshape\raggedright} % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
-  {\thesection.}{0.5em}        % Can be used to give a prefix to all sections, like 'Section ...'
+  {\thesection.}{0.2em}        % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
   [\titlerule]                 % Inserts a horizontal line after the heading
 \titlespacing*{\section}{0cm}{*1.8}{*1.8}
 
 \titleformat{\subsection}
-  {\large\raggedright}
-  {}{0em}
+  {\Large\raggedright}
+  {\thesubsection. }{0.2em}
   {}
-\titlespacing*{\subsection}{0cm}{*1.8}{*0.6}
+\titlespacing*{\subsection}{0cm}{*1.8}{*1.2}
+
+\titleformat{\subsubsection}
+  {\large\raggedright}
+  {\thesubsubsection. }{0.2em}
+  {}
+\titlespacing*{\subsection}{0cm}{*0.6}{*0.0}
 
 
 % defines  email
