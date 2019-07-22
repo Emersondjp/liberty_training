@@ -9,4 +9,4 @@
 *.idx
 *.ilg
 *.ind
-*.pdf
+./*.pdf
